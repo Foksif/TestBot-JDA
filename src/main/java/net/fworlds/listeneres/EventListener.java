@@ -35,10 +35,14 @@ public class EventListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
         String message = event.getMessage().getContentRaw();
-        if (message.contains(".ping")) {
+        if (message.contains("ping")) {
             event.getChannel().sendMessage("pong").queue();
         } else if (message.contains("молодец-ботик")) {
             event.getChannel().sendMessage("Спасибо пупсик я стараюсь").queue();
+        } else if (message.contains("Как мы относимся к невермору")) {
+            event.getChannel().sendMessage("Ужасно он ебаное животное чтобы он здох!").queue();
+        } else if (message.contains("Спокойной ночи.")) {
+            event.getChannel().sendMessage("Спокойной ночи сладенький").queue();
         }
     }
 

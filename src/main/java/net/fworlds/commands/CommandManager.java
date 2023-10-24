@@ -39,6 +39,7 @@ public class CommandManager extends ListenerAdapter {
 
             event.getHook().sendMessage(response).queue();
 
+
         } else if (command.equals("say")) {
             OptionMapping messageOption = event.getOption("message");
             if (messageOption != null) {
